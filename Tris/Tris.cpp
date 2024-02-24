@@ -74,6 +74,9 @@ public:
             risultato = controlla_riga(i);
             if (risultato != 0)
                 return risultato;
+            risultato = controlla_diagonali(i);
+            if (risultato != 0)
+                return risultato;
         }
     }
 
@@ -96,6 +99,7 @@ private:
             return 1;
         if (acc_due == 3)
             return 2;
+        return 0;
     }
 
     int controlla_riga(int rig)
@@ -115,10 +119,30 @@ private:
             return 1;
         if (acc_due == 3)
             return 2;
+        return 0;
     }
 
-    int controlla_diagonali()
+private:
+    int controlla_diagonali(int giocatore)
     {
+        int acc = 0;
+        for (int i = 0; i < 3; i++)
+        {
+            if (griglia[i][i] == giocatore)
+                acc++;
+        }
+        if (acc == 3)
+            return giocatore;
+        acc = 0;
+        for (int i = 0; i < 3; i++)
+        {
+            if (griglia[i][2 - i] == giocatore)
+                acc++;
+        }
+        if (acc == 3)
+            return giocatore;
+
+        return 0;
     }
 };
 
