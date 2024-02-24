@@ -24,47 +24,53 @@ public:
         }
     }
 
-    void stampa_griglia()
+void stampa_griglia()
+{
+    for (int i = 0; i < 3; i++)
     {
-        for (int i = 0; i < 3; i++)
+        for (int j = 0; j < 3; j++)
         {
-            for (int j = 0; j < 3; j++)
-            {
+            if (griglia[i][j] == 1)
+                cout << "X\t";
+            else if (griglia[i][j] == 2)
+                cout << "O\t";
+            else
                 cout << griglia[i][j] << "\t";
-            }
-            cout << endl;
         }
+        cout << endl;
     }
+}
 
-    bool giocatore_uno(int x, int y)
-    {
-        if (x > 2 || x < 0)
-            return false;
+bool giocatore_uno(int x, int y)
+{
+    if (x > 2 || x < 0)
+        return false;
 
-        if (y > 2 || y < 0)
-            return false;
+    if (y > 2 || y < 0)
+        return false;
 
-        if (griglia[x][y] == 1 || griglia[x][y] == 2)
-            return false;
+    if (griglia[x][y] == 1 || griglia[x][y] == 2)
+        return false;
 
-        griglia[x][y] = 1;
-        return true;
-    }
+    griglia[x][y] = 1;
+    return true;
+}
 
-    bool giocatore_due(int x, int y)
-    {
-        if (x > 2 || x < 0)
-            return false;
+bool giocatore_due(int x, int y)
+{
+    if (x > 2 || x < 0)
+        return false;
 
-        if (y > 2 || y < 0)
-            return false;
+    if (y > 2 || y < 0)
+        return false;
 
-        if (griglia[x][y] == 1 || griglia[x][y] == 2)
-            return false;
+    if (griglia[x][y] == 1 || griglia[x][y] == 2)
+        return false;
 
-        griglia[x][y] = 2;
-        return true;
-    }
+    griglia[x][y] = 2;
+    return true;
+}
+
 
     int controlla_vincitore()
     {
