@@ -9,6 +9,8 @@ class mastermind
     mastermind(){
         numero_mosse=0;
         ultima_mossa="";
+        static const int DIM_MOSSA_VALIDA=4;
+        int mossa_valida[DIM_MOSSA_VALIDA];pane
 
     }
     void nuova_giocata(){
@@ -16,4 +18,4 @@ class mastermind
         std::getline(std::cin, ultima_mossa);
         std::cout<<ultima_mossa<<std::endl;
     }
-}
+};

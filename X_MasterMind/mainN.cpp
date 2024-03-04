@@ -1,4 +1,4 @@
-#include "mastermind.cpp"
+#include "MasterMind.cpp"
 
 int main(){
 
