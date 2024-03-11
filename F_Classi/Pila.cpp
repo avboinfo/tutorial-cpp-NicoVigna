@@ -1,14 +1,19 @@
+/*
+Pila.cpp
+11/03/24
+*/
+
 #include <iostream>
 using namespace std;
 
-class Vettore
+class Pila
 {
 protected:
     int dim, len, delta;
     int *v;
 
 public:
-    Vettore(int d)
+    Pila(int d)
     {
         dim = d;
         len = 0;
@@ -30,13 +35,18 @@ public:
         v[len] = n;
         len++;
     }
+    int pop()
+    {
+        int result = v[len - 1];
+        len--;
+        return result;
+    }
     int GetElement(int index)
     {
         return v[index];
     }
-    int SetElement(){
-
-    
+    int SetElement()
+    {
     }
     void print()
     {
@@ -49,13 +59,14 @@ public:
 
 int main(int argc, char const *argv[])
 {
-    Vettore vett(15);
+    Pila vett(15);
 
     for (int i = 0; i < 20; i++)
-        vett.add(33 * i);
-    cout << vett.GetElement(10) << endl;
-    vett.SetElement(10,333);
-    vett.print();
+        vett.push(i);
+    for (int i = 0; i < 10; i++)
+        cout << vett.pop() << " ";
+
+    cout << endl;
 
     return 0;
 }
