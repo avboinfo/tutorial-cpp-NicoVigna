@@ -19,6 +19,7 @@ int RiempiMatrice(int matrice[10][10])
             matrice[i][l] = rand() % 100;
         }
     }
+    return 0;
 }
 int StampaMatrice(int matrice[10][10])
 {
@@ -30,6 +31,7 @@ int StampaMatrice(int matrice[10][10])
         }
         cout << endl;
     }
+    return 0;
 }
 int RicercaNumero(int matrice[10][10], int NumUtente)
 {
@@ -65,6 +67,7 @@ int RicercaNumero(int matrice[10][10], int NumUtente)
         ContatoreDiagonale++;
     cout << "il numero da te selezionato è presente " << contatore << " volte" << endl;
     cout << "Il numero da te selezionato è presente " << ContatoreDiagonale << " volte nella diagonale principale" << endl;
+    return 0;
 }
 
 int main()
