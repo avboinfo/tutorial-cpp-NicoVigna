@@ -15,6 +15,7 @@ int main(int argc, char const *argv[])
     prova.risultato_mossa_bis();
 
     /*
+    
     do{
         prova.nuova_giocata();
         prova.risultato_mossa();

@@ -54,7 +54,7 @@ int main(int argc, char const *argv[])
     for (int i = 0; i < 20; i++)
         vett.add(33 * i);
     cout << vett.GetElement(10) << endl;
-    vett.SetElement(10,333);
+    vett.SetElement();
     vett.print();
 
     return 0;
