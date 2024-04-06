@@ -4,6 +4,8 @@ esercizio
 Scrivere una funzione ricorsiva C++ che, assegnati due interi n ed m,
 restituisca la somma di tutti gli elementi compresi tra n ed m
 */
+
+//le funzioni ricorsive richiamano loro stesse, bisogna sempre fare attenzione a non riempire lo stack
 #include <iostream>
 
 using namespace std;
