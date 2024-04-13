@@ -6,7 +6,9 @@ using namespace std;
 class UfficioPostale
 {
 private:
-    Coda cR, cS, cF;
+    Coda cR = Coda("ricezione",1000);
+    Coda cS = Coda("spedizione",1000);
+    Coda cF = Coda("finanziario",1000);
     string nome;
     int nR, nS, nF;
 
@@ -14,10 +16,6 @@ public:
     UfficioPostale(string nome)
     {
         this->nome = nome;
-        cR = Coda("ricezione", 1000); // in questo modo assegno la Coda a cR
-        cS = Coda("spedizione", 1000);
-        cF = Coda("finanziari", 1000);
-        nR = nS = nF = 100;
     }
 
     int nuovoCliente(char servizio)
@@ -38,6 +36,7 @@ public:
         default:
             cout << "Questo servizio te lo fai da solo!!!!!!" << endl;
         }
+        return 0;
     }
     void chiamaCliente(char servizio)
     {
