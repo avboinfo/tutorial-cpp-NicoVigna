@@ -17,8 +17,8 @@ private:
 public:
     BattleShip()
     {
-        mappa=BattleField(VOID);
-        campo=BattleField(VOID);
+        mappa = BattleField(VOID);
+        campo = BattleField(VOID);
         srand(time(NULL));
         campo.placeHorizontalShip(3);
         campo.placeVerticalShip(4);
@@ -43,8 +43,23 @@ public:
             else
                 mappa.put(x, y, MISS);
         }
-
+        mappa.stampa();
+        ask();
         mappa.stampa();
         campo.stampa();
+    }
+    void ask()
+    {
+        cout << "inserisci le coordinate di riga e colonna in cui sganciare la bomba: ";
+        int x, y;
+        cin >> x;
+        cin >> y;
+        if (campo.get(x, y) == SHIP)
+        {
+            mappa.put(x, y, HIT);
+            campo.put(x, y, HIT);
+        }
+        else
+            mappa.put(x, y, MISS);
     }
 };
