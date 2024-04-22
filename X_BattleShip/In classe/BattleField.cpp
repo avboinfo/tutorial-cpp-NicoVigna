@@ -87,4 +87,3 @@ public:
             m[x + i][y] = SHIP;
     }
 };
-

@@ -62,4 +62,17 @@ public:
         else
             mappa.put(x, y, MISS);
     }
+    bool GameOver()
+    {
+        for (int i = 0; i < DIM; i++)
+        {
+            for (int j = 0; j < DIM; i++)
+            {
+                if (campo.get(i, j) == SHIP)
+                    return false;
+                else
+                    return true;
+            }
+        }
+    }
 };

@@ -7,9 +7,10 @@
 #include "BattleShip.cpp"
 using namespace std;
 
-int main(){
-    cout<<"Gioco della Battaglia Navale-Buon divertimento"<<endl;
+int main()
+{
+    cout << "Gioco della Battaglia Navale-Buon divertimento" << endl;
     BattleShip gioco;
     gioco.play();
-    cout<<"GAME OVER"<<endl;
+    cout << "GAME OVER" << endl;
 }
