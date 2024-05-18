@@ -14,14 +14,7 @@ int solve(){
     int risposta = 42;
 
     // aggiungi codice...
-    int maMCD=1;
-    int MCD=1;
-    for(int n:N){
-        MCD=MCD*n;
-        if(n
-    }
-    for(int )
-    return risposta;
+    
 }
 
 int main(){
