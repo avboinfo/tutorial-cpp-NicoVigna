@@ -3,7 +3,7 @@
 
 int compra(int N, int M, int A, int B) {
     int NCarnet = 0;
-    int totale, costo;
+    int totale=0, costo=0;
     int NBiglietti=0;
   
 
